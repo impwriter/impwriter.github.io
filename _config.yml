@@ -8,11 +8,11 @@
 theme_version: 1.0.4
 
 # Site settings
-title:              Fandomnesia
+title:              Flaint Clothing
 logo:               https://fandomnesia.github.io/Logo.png
-description:        Situs informasi terupdate dan konten menarik seputar Geek Culture, Anime dan Manga, dan Drama Series.
+description:        Flaint is a clothing brand that combines taste and integrity in a fashion design
 baseurl:            '' # The subpath of your site, e.g. /blog
-url:                'https://fandomnesia.github.io' # The base hostname & protocol for your site
+url:                'https://impwriter.github.io' # The base hostname & protocol for your site
 twitter:            https://twitter.com/aspirethemes
 facebook:           https://www.facebook.com/aspirethemes
 instagram:          https://www.instagram.com/aspirethemes
