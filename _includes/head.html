@@ -1,18 +1,22 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Fashion solutions, 1, 2, 3, 4, 5, 6, Collection, Follow Us">
-    <meta name="description" content="">
+    <meta name="keywords" content="{% if page.keyword %}{{ page.keyword }}{% else %}{{ page.categories }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Home.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="Home.css" media="screen">
+    {% if page.title %}<link rel="stylesheet" href="Product-Detail.css" media="screen">{% endif %}
+
+    <script class="u-script" type="text/javascript" src="jquery.js"></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js"></script>
     <meta name="generator" content="Nicepage 4.0.3, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
-    
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i">
+
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -21,5 +25,14 @@
 }</script>
     <meta name="theme-color" content="#8ebec9">
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="{% if page.title %}product{% else %}website{% endif %}">
+    {% if page.image %}<meta property="og:image" content="{{ page.image }}">{% endif %}
+    {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% endif %}
+    {% if page.url %}<meta property="og:url" content="{{ page.url }}{% else %}{{ site.url }}">{% endif %}
+    
+    {% if page.harga %}
+    <meta property="product:plural_title"      content="{{ page.title }}" />
+    <meta property="product:price:amount"      content="{{ page.harga }}"/>
+    <meta property="product:price:currency"    content="IDR"/>
+    {% endif %}
   </head>
