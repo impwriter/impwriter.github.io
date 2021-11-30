@@ -1,0 +1,69 @@
+# Welcome to Nubia Jekyll Theme!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+theme_version: 1.0.4
+
+# Site settings
+title:              Fandomnesia
+logo:               https://fandomnesia.github.io/Logo.png
+description:        Situs informasi terupdate dan konten menarik seputar Geek Culture, Anime dan Manga, dan Drama Series.
+baseurl:            '' # The subpath of your site, e.g. /blog
+url:                'https://fandomnesia.github.io' # The base hostname & protocol for your site
+twitter:            https://twitter.com/aspirethemes
+facebook:           https://www.facebook.com/aspirethemes
+instagram:          https://www.instagram.com/aspirethemes
+
+markdown:  kramdown
+permalink: /:title/
+paginate:  11
+
+gems:
+  - jekyll-paginate
+  - jekyll/tagging
+
+include:
+  - _pages
+
+# jekyll-related-posts settings.
+related_by: tags and categories
+related_limit: 6
+related_categories: 1
+related_tags: 1
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  /tag/:title
+
+# Categories
+categories_page_dir:         categories
+categories_page_layout:      categories_page
+categories_permalink_style:  /categories/:title
+
+
+# Pages path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+# Authors
+authors:
+  ilham:
+    name:     Ilham Maulana
+    bio:      Freelance Content Writer Geek Culture, Anime dan Manga, dan Drama Series
+    gravatar: fandomnesia.github.io/favicon/20210705_134927_0000.png
+    email:    ilhammp1213@gmail.com
+    website:  #
+    github:   #
+    twitter:  https://twitter.com/impwriters

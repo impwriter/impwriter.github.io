@@ -1,0 +1,19 @@
+---
+layout: default
+---
+  <!-- begin content -->
+  <main style="margin-top: 75px;" class="content" aria-label="Content">
+{% include post-hero.html %}
+
+<div class="container">
+  <div class="row animate">
+      {% for post in paginator.posts %}
+        {% include post-card.html %}
+      {% endfor %}
+  </div>
+</div>
+
+{% include pagination.html %}
+
+  </main>
+  <!-- end content -->

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="content">
+  <div class="container">
+    <div class="row animate">
+
+<div class="col col-6 col-d-12">
+  <div class="post__info ">
+    <h1 class="post__title">{{ page.categories }}</h1>
+  </div>
+</div>
+
+      {% for post in site.posts %}
+      {% if post.categories contains page.categories %}
+        {% include post-card.html %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

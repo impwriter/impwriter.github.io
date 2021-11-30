@@ -1,0 +1,106 @@
+---
+layout: default
+---
+
+  <!-- begin content -->
+  <main style="margin-top: 75px;" class="content" aria-label="Content">
+    <div class="post-head">
+  <div class="container">
+    <div class="row">
+      
+
+      
+      <div class="col col-6 col-d-12">
+      <nav><small><a href="/">Beranda</a> > <a href="/categories/{{ page.categories }}">{{ page.categories }}</a></small></nav>      
+      </div>
+      
+
+      
+      
+      
+      <div class="col col-6 col-d-12">
+        <div class="post__info ">                   
+  
+          <h1 class="post__title">{{ page.title }}</h1>
+          <p class="post__author">{{ page.description }}</p>
+          <img class="lazy" data-src="{{ page.image }}" width="1280" height="720" alt="{{ page.title }}">
+          <small style="margin-top: 5px;">{{ page.sumber }}</small>
+
+          <div style="margin-top: 35px;" class="post__meta">
+            <a href="/" class="post__author-image">
+              <img class="lazy" data-src="/favicon.ico" alt="{{ page.author }}">
+            </a>
+
+            <div class="post__meta-bottom">
+              <a class="post__author" href="/">Ilham Maulana</a>
+              <time class="post__date" datetime="{{ page.date }}">{{ page.date | date: '%d %b %Y' }}</time>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- begin post -->
+<div class="container animate">
+
+  <article class="post">
+
+    <div class="post__content">
+      {% include toc.html %}
+      {{ content }}
+    </div>
+
+            <div class="post__tags">
+                {% for tag in page.tags %}
+                <a href="/tag/{{ tag }}" class="post__tag">{{ tag }}</a>
+                {% endfor %}
+            </div>
+
+    <div class="post__share">
+      <ul class="share__list list-reset">
+        <li class="share__item">
+          <a class="share__link share__twitter"
+            href="https://twitter.com/intent/tweet?text=Do%20what%20you%20can,%20with%20what%20you%20have,%20where%20you%20are&url=https://menca.netlify.app/do-what-you-can-with-what-you-have-where-you-are"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+        </li>
+        <li class="share__item">
+          <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://menca.netlify.app/do-what-you-can-with-what-you-have-where-you-are"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+        </li>
+        <li class="share__item">
+          <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url=https://menca.netlify.app/do-what-you-can-with-what-you-have-where-you-are&amp;media=https://menca.netlify.app/images/07.jpg&amp;description=Do%20what%20you%20can,%20with%20what%20you%20have,%20where%20you%20are"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest"
+          rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+        </li>
+        <li class="share__item">
+          <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://menca.netlify.app/do-what-you-can-with-what-you-have-where-you-are&title=Do%20what%20you%20can,%20with%20what%20you%20have,%20where%20you%20are&summary=Leverage%20agile%20frameworks%20to%20provide%20a%20robust%20synopsis%20for%20high%20level%20overviews.%20Iterative%20a...&source=Menca"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+        </li>
+      </ul>
+    </div>
+
+  </article>
+</div>
+<!-- end post -->
+
+  <div class="container">
+    <div class="row animate">
+
+<div class="col col-6 col-d-12">
+  <div class="post__info ">
+    <h4 class="post__title">Artikel Terkait</h4>
+  </div>
+</div>
+
+{% include related.html %}
+
+    </div>
+  </div>
+
+  </main>
+<!-- end content -->
